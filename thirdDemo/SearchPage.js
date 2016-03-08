@@ -112,7 +112,7 @@ var SearchPage = React.createClass({
 					<TextInput style = {styles.searchInput} 
 					value = {this.state.searchString} 
 					placeholder = 'Searc via name or postcode'
-					onChange={this.onSearchTextChanged}/>
+					onChangeText={(txt)=>{this.onSearchTextChanged2(txt)}}/>
 					
 					<TouchableHighlight style = {styles.button}
 					underlayColor = '#99d9f4'
@@ -158,6 +158,11 @@ var SearchPage = React.createClass({
 		this.setState({searchString:event.nativeEvent.text});
 		console.log(this.state.searchString);
 	},
+	onSearchTextChanged2:function(txt) {
+		this.setState({searchString:txt});
+		console.log(this.state.searchString);
+	},
+
 
 	onSearchPressed: function() {
 		var query = urlForQueryAndPage('place_name', this.state.searchString,1);

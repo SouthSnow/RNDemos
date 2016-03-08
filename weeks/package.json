@@ -1,5 +1,5 @@
 {
-  "name": "xiecheng",
+  "name": "weeks",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "react-native": "^0.20.0",
-    "react-native-swiper": "^1.4.3"
+    "react-timer-mixin": "^0.13.3"
   }
 }
